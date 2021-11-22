@@ -1,0 +1,14 @@
+body{
+    color: #222;
+}
+li{
+    color: #222;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #222;
+}
+input{
+    outline: none;
+}

@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_2773253_qgqh5krxjfi.css">
+  <!-- <link rel="stylesheet" href="https://at.alicdn.com/t/font_2745258_d9ulg092iih.css"> -->
+  <link rel="stylesheet" href="./css/bootstrap.css">
+
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/footer_base.css">
+  <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+  <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+  <!-- <script src="./js/jquery3.6.0.min.js"></script> -->
+  <script src="./js/bootstrap.js"></script>
+  <script src="./js/data.js"></script>
+  <script src="./js/pubu.js"></script>
+  <!-- <script src="./js/sinaData.js"></script> -->
+  <!-- <script src="./js/index.js"></script> -->
+
+  <title>微博-随时随地发现新鲜事</title>
+</head>
+
+<body>
+  <div class="grid">
+    <div class="span-col-4 header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><span class="logo"></span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"><i class="iconfont icon-shouye Icon"></i>首页 <span
+                  class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="iconfont icon-video Icon"></i>视频</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-huanfu Icon"></i>换肤
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">春风</a>
+                <a class="dropdown-item" href="#">夏至</a>
+                <a class="dropdown-item" href="#">秋风</a>
+                <a class="dropdown-item" href="#">冬至</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="iconfont icon-danyehuaban Icon"></i>发现</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="resiger.html">注册</a>
+            </li>
+            <li class="nav-item" id="exit">
+              <a class="nav-link" style="cursor: pointer;">退出</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0 searchForm">
+            <input class="form-control mr-sm-2 searchHot" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+          <div class="hideHotList">
+            <!-- <p><span>查看完整版热搜</span><i class="iconfont icon-shuangjiantouyou"></i></p> -->
+            <ul>
+              <li>
+                查看完整版热搜
+                <!-- <a href="javascript:;"></a> -->
+                <em class="iconfont icon-shuangjiantouyou"></em>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+    <div class="span-col-3 content-left">
+      <div class="container">
+        <!-- Nav tabs -->
+        <div class="row">
+          <div class="col-3  content-left-title">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+                aria-controls="v-pills-home" aria-selected="true">热门</a>
+              <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+                aria-controls="v-pills-profile" aria-selected="false">头条</a>
+              <a class="nav-link pubu" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
+                aria-controls="v-pills-messages" aria-selected="false">瀑布流</a>
+              <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+              aria-controls="v-pills-settings" aria-selected="false">榜单</a>
+              <a class="nav-link" id="v-pills-gaoxiao-tab" data-toggle="pill" href="#v-pills-gaoxiao" role="tab"
+                aria-controls="v-pills-gaoxiao" aria-selected="false">搞笑</a>
+              <a class="nav-link" id="v-pills-shehui-tab" data-toggle="pill" href="#v-pills-shehui" role="tab"
+                aria-controls="v-pills-shehui" aria-selected="false">社会</a>
+              <a class="nav-link" id="v-pills-shishang-tab" data-toggle="pill" href="#v-pills-shishang" role="tab"
+                aria-controls="v-pills-shishang" aria-selected="false">时尚</a>
+              <a class="nav-link" id="v-pills-dianying-tab" data-toggle="pill" href="#v-pills-dianying" role="tab"
+                aria-controls="v-pills-dianying" aria-selected="false">电影</a>
+              <a class="nav-link" id="v-pills-meinv-tab" data-toggle="pill" href="#v-pills-meinv" role="tab"
+                aria-controls="v-pills-meinv" aria-selected="false">美女</a>
+              <a class="nav-link" id="v-pills-tiyu-tab" data-toggle="pill" href="#v-pills-tiyu" role="tab"
+                aria-controls="v-pills-tiyu" aria-selected="false">体育</a>
+              <a class="nav-link" id="v-pills-dongman-tab" data-toggle="pill" href="#v-pills-dongman" role="tab"
+                aria-controls="v-pills-dongman" aria-selected="false">动漫</a>
+            </div>
+          </div>
+          <div class="col-9 content-left-list">
+            <div class="tab-content" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                aria-labelledby="v-pills-home-tab">
+                <div class="c-l-banner1">
+                  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="./img/img1.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>First slide label</h5>
+                          <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./img/img2.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Second slide label</h5>
+                          <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./img/img3.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Third slide label</h5>
+                          <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="c-l-card1">
+                  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>欢迎光临</strong>你还有很多内容还没浏览！！！！！
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="card mb-4">
+                    <div class="row no-gutters">
+                      <div class="col-md-3">
+                        <img class="imgb" src="./img/1.jpg" alt="...">
+                      </div>
+                      <div class="col-md-9">
+                        <div class="card-body">
+                          <h5 class="card-title">哪怕前路充满未知，也要为梦想拼上一切 ！</h5>
+                          <p class="card-text">
+                            【#袁隆平爷爷的禾下乘凉梦成真了#】“我做了一个梦，梦见我那个水稻长得比高粱还高，穗子比扫帚还长。我跟我的同事就坐在那个稻穗下乘凉……”近日，重庆大足2米“巨型稻”试种成功，高度是常规稻的两倍，预计亩产可达1600斤以上。“巨型稻”不仅有粗壮挺拔的稻秆，而且#巨型稻能为水产和哺乳动物遮阴
+                          </p>
+                          <p class="card-text c-t-bottom">
+                            <small class="text-muted t-m-aut"><img src="./img/aut15.jpg" alt=""></small>
+                            <small class="text-muted"></small>
+                            <small class="text-muted t-m-uname">央视新闻</small>
+                            <small class="text-muted t-m-day">8月7日</small>
+                            <small class="text-muted t-m-time">19:30</small>
+                            <small class="text-muted t-m-Icon "><i class="iconfont icon-dianzan"></i>121212</small>
+                            <small class="text-muted t-m-Icon"><i class="iconfont icon-pinglun"></i>232323</small>
+                            <small class="text-muted t-m-Icon"><i class="iconfont icon-fenxiang1"></i>555</small>
+                          </p>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                <div class="c-l-card1">
+                  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    你有多条内容未浏览，<strong>请查看！</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="card mb-4 cm">
+                    <div class="row no-gutters">
+                      <div class="col-md-3">
+                        <img class="imgb" src="./img/1.jpg" alt="...">
+                      </div>
+                      <div class="col-md-9">
+                        <div class="card-body">
+                          <h5 class="card-title">哪怕前路充满未知，也要为梦想拼上一切 ！</h5>
+                          <p class="card-text">
+                            【#袁隆平爷爷的禾下乘凉梦成真了#】“我做了一个梦，梦见我那个水稻长得比高粱还高，穗子比扫帚还长。我跟我的同事就坐在那个稻穗下乘凉……”近日，重庆大足2米“巨型稻”试种成功，高度是常规稻的两倍，预计亩产可达1600斤以上。“巨型稻”不仅有粗壮挺拔的稻秆，而且#巨型稻能为水产和哺乳动物遮阴
+                          </p>
+                          <p class="card-text c-t-bottom">
+                            <small class="text-muted t-m-aut"><img src="./img/aut15.jpg" alt=""></small>
+                            <small class="text-muted"></small>
+                            <small class="text-muted t-m-uname">央视新闻</small>
+                            <small class="text-muted t-m-day">8月7日</small>
+                            <small class="text-muted t-m-time">19:30</small>
+                            <small class="text-muted t-m-Icon "><i class="iconfont icon-dianzan"></i>121212</small>
+                            <small class="text-muted t-m-Icon"><i class="iconfont icon-pinglun"></i>232323</small>
+                            <small class="text-muted t-m-Icon"><i class="iconfont icon-fenxiang1"></i>555</small>
+                          </p>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card mb-4 cm">
+                    <div class="row no-gutters">
+                      <div class="col-md-3">
+                        <img class="imgb" src="./img/1.jpg" alt="...">
+                      </div>
+                      <div class="col-md-9">
+                        <div class="card-body">
+                          <h5 class="card-title">哪怕前路充满未知，也要为梦想拼上一切 ！</h5>
+                          <p class="card-text">
+                            【#袁隆平爷爷的禾下乘凉梦成真了#】“我做了一个梦，梦见我那个水稻长得比高粱还高，穗子比扫帚还长。我跟我的同事就坐在那个稻穗下乘凉……”近日，重庆大足2米“巨型稻”试种成功，高度是常规稻的两倍，预计亩产可达1600斤以上。“巨型稻”不仅有粗壮挺拔的稻秆，而且#巨型稻能为水产和哺乳动物遮阴
+                          </p>
+                          <p class="card-text c-t-bottom">
+                            <small class="text-muted t-m-aut"><img src="./img/aut15.jpg" alt=""></small>
+                            <small class="text-muted"></small>
+                            <small class="text-muted t-m-uname">央视新闻</small>
+                            <small class="text-muted t-m-day">8月7日</small>
+                            <small class="text-muted t-m-time">19:30</small>
+                            <small class="text-muted t-m-Icon "><i class="iconfont icon-dianzan"></i>121212</small>
+                            <small class="text-muted t-m-Icon"><i class="iconfont icon-pinglun"></i>232323</small>
+                            <small class="text-muted t-m-Icon"><i class="iconfont icon-fenxiang1"></i>555</small>
+                          </p>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card mb-4 cm">
+                    <div class="row no-gutters">
+                      <div class="col-md-3">
+                        <img class="imgb" src="./img/1.jpg" alt="...">
+                      </div>
+                      <div class="col-md-9">
+                        <div class="card-body">
+                          <h5 class="card-title">哪怕前路充满未知，也要为梦想拼上一切 ！</h5>
+                          <p class="card-text">
+                            【#袁隆平爷爷的禾下乘凉梦成真了#】“我做了一个梦，梦见我那个水稻长得比高粱还高，穗子比扫帚还长。我跟我的同事就坐在那个稻穗下乘凉……”近日，重庆大足2米“巨型稻”试种成功，高度是常规稻的两倍，预计亩产可达1600斤以上。“巨型稻”不仅有粗壮挺拔的稻秆，而且#巨型稻能为水产和哺乳动物遮阴
+                          </p>
+                          <p class="card-text c-t-bottom">
+                            <small class="text-muted t-m-aut"><img src="./img/aut15.jpg" alt=""></small>
+                            <small class="text-muted"></small>
+                            <small class="text-muted t-m-uname">央视新闻</small>
+                            <small class="text-muted t-m-day">8月7日</small>
+                            <small class="text-muted t-m-time">19:30</small>
+                            <small class="text-muted t-m-Icon "><i class="iconfont icon-dianzan"></i>121212</small>
+                            <small class="text-muted t-m-Icon"><i class="iconfont icon-pinglun"></i>232323</small>
+                            <small class="text-muted t-m-Icon"><i class="iconfont icon-fenxiang1"></i>555</small>
+                          </p>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card mb-4 cm">
+                    <div class="row no-gutters">
+                      <div class="col-md-3">
+                        <img class="imgb" src="./img/1.jpg" alt="...">
+                      </div>
+                      <div class="col-md-9">
+                        <div class="card-body">
+                          <h5 class="card-title">哪怕前路充满未知，也要为梦想拼上一切 ！</h5>
+                          <p class="card-text">
+                            【#袁隆平爷爷的禾下乘凉梦成真了#】“我做了一个梦，梦见我那个水稻长得比高粱还高，穗子比扫帚还长。我跟我的同事就坐在那个稻穗下乘凉……”近日，重庆大足2米“巨型稻”试种成功，高度是常规稻的两倍，预计亩产可达1600斤以上。“巨型稻”不仅有粗壮挺拔的稻秆，而且#巨型稻能为水产和哺乳动物遮阴
+                          </p>
+                          <p class="card-text c-t-bottom">
+                            <small class="text-muted t-m-aut"><img src="./img/aut15.jpg" alt=""></small>
+                            <small class="text-muted"></small>
+                            <small class="text-muted t-m-uname">央视新闻</small>
+                            <small class="text-muted t-m-day">8月7日</small>
+                            <small class="text-muted t-m-time">19:30</small>
+                            <small class="text-muted t-m-Icon "><i class="iconfont icon-dianzan"></i>121212</small>
+                            <small class="text-muted t-m-Icon"><i class="iconfont icon-pinglun"></i>232323</small>
+                            <small class="text-muted t-m-Icon"><i class="iconfont icon-fenxiang1"></i>555</small>
+                          </p>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card mb-4 cm">
+                    <div class="row no-gutters">
+                      <div class="col-md-3">
+                        <img class="imgb" src="./img/1.jpg" alt="...">
+                      </div>
+                      <div class="col-md-9">
+                        <div class="card-body">
+                          <h5 class="card-title">哪怕前路充满未知，也要为梦想拼上一切 ！</h5>
+                          <p class="card-text">
+                            【#袁隆平爷爷的禾下乘凉梦成真了#】“我做了一个梦，梦见我那个水稻长得比高粱还高，穗子比扫帚还长。我跟我的同事就坐在那个稻穗下乘凉……”近日，重庆大足2米“巨型稻”试种成功，高度是常规稻的两倍，预计亩产可达1600斤以上。“巨型稻”不仅有粗壮挺拔的稻秆，而且#巨型稻能为水产和哺乳动物遮阴
+                          </p>
+                          <p class="card-text c-t-bottom">
+                            <small class="text-muted t-m-aut"><img src="./img/aut15.jpg" alt=""></small>
+                            <small class="text-muted"></small>
+                            <small class="text-muted t-m-uname">央视新闻</small>
+                            <small class="text-muted t-m-day">8月7日</small>
+                            <small class="text-muted t-m-time">19:30</small>
+                            <small class="text-muted t-m-Icon "><i class="iconfont icon-dianzan"></i>121212</small>
+                            <small class="text-muted t-m-Icon"><i class="iconfont icon-pinglun"></i>232323</small>
+                            <small class="text-muted t-m-Icon"><i class="iconfont icon-fenxiang1"></i>555</small>
+                          </p>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                 <div class="pubuContainer">
+<!--                   
+                  <div class="box">
+                    <img src="./images/5.jpg" alt="./images/2.jpg">
+                  </div>
+                  <div class="box">
+                    <img src="./images/2.jpg" alt="./images/3.jpg">
+                  </div>
+                  <div class="box">
+                    <img src="./images/4.jpg" alt="./images/4.jpg">
+                  </div>
+                  <div class="box">
+                    <img src="./images/3.jpg" alt="./images/5.jpg">
+                  </div>
+                       -->
+                 </div>
+              </div>
+              <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                <div class="c-l-banner1">
+                  <div id="carouselExampleCaptions3" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="./img/img3.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>First slide label</h5>
+                          <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./img/img4.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Second slide label</h5>
+                          <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./img/img5.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Third slide label</h5>
+                          <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="v-pills-gaoxiao" role="tabpanel" aria-labelledby="v-pills-gaoxiao-tab">
+                gaoxiao
+              </div>
+              <div class="tab-pane fade" id="v-pills-shehui" role="tabpanel" aria-labelledby="v-pills-shehui-tab">
+                shehui
+              </div>
+              <div class="tab-pane fade" id="v-pills-shishang" role="tabpanel" aria-labelledby="v-pills-shishang-tab">
+                shishang
+              </div>
+              <div class="tab-pane fade" id="v-pills-dianying" role="tabpanel" aria-labelledby="v-pills-dianying-tab">
+                dianying
+              </div>
+              <div class="tab-pane fade" id="v-pills-meinv" role="tabpanel" aria-labelledby="v-pills-meinv-tab">
+                meinv
+              </div>
+              <div class="tab-pane fade" id="v-pills-tiyu" role="tabpanel" aria-labelledby="v-pills-tiyu-tab">
+                tiyu
+              </div>
+              <div class="tab-pane fade" id="v-pills-dongman" role="tabpanel" aria-labelledby="v-pills-dongman-tab">
+                dongman
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="span-col-1 content-right">
+      <div class="container1">
+        <div class="changeTab">
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                aria-controls="pills-home" aria-selected="true">账号登录</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                aria-controls="pills-profile" aria-selected="false">安全登录</a>
+            </li>
+
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active tab1" id="pills-home" role="tabpanel"
+              aria-labelledby="pills-home-tab">
+              <!-- <div class="tabContent"> -->
+              <div class="input-group input-group-lg boxContent">
+                <div class="input-group-prepend inputDiv">
+                  <span class="input-group-text" id="phone"><i class="phoneIcon"></i></span>
+                </div>
+                <input name="phone" type="text" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-lg">
+              </div>
+              <div class="input-group input-group-lg boxContent">
+                <div class="input-group-prepend inputDiv">
+                  <span class="input-group-text" id="pass"><i class="passIcon"></i></span>
+                </div>
+                <input name="pass" type="text" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-lg">
+              </div>
+              <p class="check">
+                <input type="checkbox">
+                <span>记住我</span>
+                <a href="#">忘记密码</a>
+              </p>
+              <div class="loginBtn" id="loginto"><a><span>登录</span></a></div>
+              <p class="resigerBtn">
+                <span>还没有微博</span>
+                <a href="resiger.html">立即注册</a>
+              </p>
+            </div>
+            <!-- </div> -->
+            <div class="tab-pane fade tab2" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+              <div class="content-box">
+                <img src="./img/gen.png">
+                <p class="scan">请用微博客户端扫码</p>
+              </div>
+              <p class="resigerBtn">
+                <span>还没有微博</span>
+                <a href="index.html">立即注册</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="changeTab1">
+          <div class="card" style="width: 100%;">
+            <img src="./img/bgs.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="autorB"><img src="./img/aut2.jpg" alt="" class="card-img-top"></p>
+              <p class="card-text">
+                <small class="text-muted">关注 <span>12</span></small>
+                <small class="text-muted">粉丝 <span>4</span></small>
+                <small class="text-muted">微博 <span>8</span></small>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="container2">
+        <div class="card mb-12">
+          <h5 style="text-align: center;">微博热门话题</h5>
+        </div>
+        <div class="card mb-3">
+          <div class="row no-gutters">
+            <div class="col-md-4 c-m-cd">
+              <img src="./img/bai1.jpg" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h6 class="card-title">#如何评价周琦退出新赛季#</h6>
+                <p class="card-text"><small class="text-muted">7393.6万阅读    2832讨论</small></p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters">
+            <div class="col-md-4 c-m-cd">
+              <img src="./img/bai1.jpg" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h6 class="card-title">#如何评价周琦退出新赛季#</h6>
+                <p class="card-text"><small class="text-muted">7393.6万阅读    2832讨论</small></p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters">
+            <div class="col-md-4 c-m-cd">
+              <img src="./img/bai1.jpg" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h6 class="card-title">#如何评价周琦退出新赛季#</h6>
+                <p class="card-text"><small class="text-muted">7393.6万阅读    2832讨论</small></p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters">
+            <div class="col-md-4 c-m-cd">
+              <img src="./img/bai1.jpg" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h6 class="card-title">#如何评价周琦退出新赛季#</h6>
+                <p class="card-text"><small class="text-muted">7393.6万阅读    2832讨论</small></p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="container2">
+        <div class="card mb-12">
+          <h5 style="text-align: center;">微博热门话题</h5>
+        </div>
+        <div class="card mb-3">
+          <div class="row no-gutters">
+            <div class="col-md-4 c-m-cd">
+              <img src="./img/bai1.jpg" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h6 class="card-title">#如何评价周琦退出新赛季#</h6>
+                <p class="card-text"><small class="text-muted">7393.6万阅读    2832讨论</small></p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters">
+            <div class="col-md-4 c-m-cd">
+              <img src="./img/bai1.jpg" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h6 class="card-title">#如何评价周琦退出新赛季#</h6>
+                <p class="card-text"><small class="text-muted">7393.6万阅读    2832讨论</small></p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters">
+            <div class="col-md-4 c-m-cd">
+              <img src="./img/bai1.jpg" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h6 class="card-title">#如何评价周琦退出新赛季#</h6>
+                <p class="card-text"><small class="text-muted">7393.6万阅读    2832讨论</small></p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters">
+            <div class="col-md-4 c-m-cd">
+              <img src="./img/bai1.jpg" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h6 class="card-title">#如何评价周琦退出新赛季#</h6>
+                <p class="card-text"><small class="text-muted">7393.6万阅读    2832讨论</small></p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="span-col-4 footer">
+        <div class="footer-top">
+          <div></div>
+          <div>
+            <dl class="list">
+              <dt>微博精彩</dt>
+              <dd>
+                  <a href="#">热门微博</a>
+                  <a href="#">热门话题</a>
+              </dd>
+              <dd>
+                  <a href="#">热门微博</a>
+                  <a href="#">热门话题</a>
+              </dd>
+              <dd>
+                  <a href="#">热门微博</a>
+                  <a href="#">热门话题</a>
+              </dd>
+          </dl>
+          </div>
+          <div><dl class="list">
+            <dt>手机玩微博</dt>
+            <dd>
+                <span><img src="./img/footer_code_v2.png" alt=""></span>
+                <span>扫码下载，更多版本
+                    <br>
+                    戳这里
+                </span>
+            </dd>
+            
+        </dl></div>
+          <div>
+            <dl class="list">
+              <dt>认证&amp;合作</dt>
+              <dd><span>申请认证</span><span>链接网站</span></dd>
+              <dd><span>企业微博</span><span>广告服务</span></dd>
+              <dd><span>微博标识</span><span>广告代理商</span></dd>
+              <dd><span>开放平台</span></dd>
+            </dl>
+          </div>
+          <div>
+            <dl class="list">
+              <dt>微博帮助</dt>
+              <dd><span>常见问题</span></dd>
+              <dd><span>自助服务</span></dd>
+                <dd><span>企业&amp;商业热线</span></dd>
+                <dd><span>4000-980-980</span></dd>
+            </dl>
+          </div>
+          <div></div>
+        </div>
+        <div class="footer-bottom">
+          <div class="other-links">
+            <p><a href="#"><i class="weibo"></i></a>微博客服
+            <span>客服热线4000-960-960</span>
+            <span>违规内容投诉咨询010-60618076</span>
+            <span>意见反馈</span>
+            <span>舞弊举报</span>
+            <span>开放平台</span>
+            <span>微博招聘</span>
+            <span>新浪网导航</span>
+            <span>投诉处理大厅</span>
+            <span>DMCA投诉/Report</span>
+            </p>
+            <p><a href="#"><i class="weibo"></i></a>微博客服
+                <span>客服热线4000-960-960</span>
+                <span>违规内容投诉咨询010-60618076</span>
+                <span>意见反馈</span>
+                <span>舞弊举报</span>
+                <span>开放平台</span>
+                <span>微博招聘</span>
+                <span>新浪网导航</span>
+                <span>投诉处理大厅</span>
+                <span>DMCA投诉/Report</span>
+                </p>
+                <p><a href="#"><i class="weibo"></i></a>微博客服
+                    <span>客服热线4000-960-960</span>
+                    <span>违规内容投诉咨询010-60618076</span>
+                    <span>意见反馈</span>
+                    <span>舞弊举报</span>
+                    <span>开放平台</span>
+                    <span>微博招聘</span>
+                    <span>新浪网导航</span>
+                    <span>投诉处理大厅</span>
+                    <span>DMCA投诉/Report</span>
+                    </p>
+                    <p><a href="#"><i class="weibo"></i></a>微博客服
+                        <span>客服热线4000-960-960</span>
+                        <span>违规内容投诉咨询010-60618076</span>
+                        <span>意见反馈</span>
+                        <span>舞弊举报</span>
+                        <span>开放平台</span>
+                        <span>微博招聘</span>
+                        <span>新浪网导航</span>
+                        <span>投诉处理大厅</span>
+                        <span>DMCA投诉/Report</span>
+                        </p>
+        </div>
+        </div>
+        
+    </div>
+  </div>
+
+  <script src="./js/cookie.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/pubu.js"></script>
+ 
+  <script>
+   
+  </script>
+</body>
+
+</html>

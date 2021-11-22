@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/resiger.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_2773253_aequbzhkhwj.css">
+    <script src="./js/jquery3.6.0.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="header-line"></div>
+        <div class="header-logo">
+            <div class="weiboLogo"></div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main-tab">
+            <a href="#" class="cur">个人注册</a>
+            <span class="vline">|</span>
+            <a href="#" class="">官方注册</a>
+        </div>
+        <div class="main-content">
+            <div class="m-c-form">
+                <div class="input-group mb-3 inputM">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="setPhone">手机</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="phone">
+                  </div>
+                  <span class="display-none" id="span1"></span>
+                  <div class="input-group mb-3 inputM">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="setPass">设置密码</span>
+                    </div>
+                    <input name="password" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                  <span class="display-none" id="span3"></span>
+                  <div class="input-group mb-3 inputM">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="birthday" style="width: 82px;">生日</span>
+                      <select name="year" id="" style="width: 70px;border: 1px solid #ccc;">
+                        <option value="">2000</option>
+                        <option value="">2001</option>
+                        <option value="">2002</option>
+                        <option value="">2003</option>
+                    </select>
+                    <span class="input-group-text">年</span>
+                    <select name="month" id="" style="width: 70px;border: 1px solid #ccc;">月
+                      <option value="">1</option>
+                      <option value="">2</option>
+                      <option value="">3</option>
+                      <option value="">4</option>
+                  </select>
+                  <span class="input-group-text">月</span>
+                  <select name="day" id="" style="width: 70px;border: 1px solid #ccc;">日
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                </select>
+                <span class="input-group-text">日</span>
+                    </div>
+                  </div>
+                  <span class="display-none"></span>
+                  <div class="input-group mb-3 inputM">
+                    <div class="input-group-prepend">
+                      <button class="btn btn-outline-secondary" type="button" id="button-addon1">获取验证码</button>
+                    </div>
+                    <input name="code" type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                  </div>
+                  
+                  <span class="display-none" id="span2"></span>
+                  <span id="spann"></span>
+                  <div class="notCode"><a href="#">收不到验证码</a></div>
+                  <div class="resigerto" id="resigerto">注册</div>
+                  <div class="notCode">
+                      <p><a href="#">微博服务使用协议</a></p>
+                      <p><a href="#">微博个人信息保护政策</a></p>
+                      <p><a href="#">全国人大常委会关于加强网络信息保护的决定</a></p>
+                  </div>
+            </div>
+            <div class="m-c-form1">
+                <div class="input-group mb-3 inputM">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="setEmail">邮箱</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                  <span class="display-none"></span>
+                  <div class="input-group mb-3 inputM">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="setPassword">设置密码</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                  <span class="display-none"></span>
+                  <div class="input-group mb-3 inputM">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="username">官方注册微博名</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                  <span class="display-none"></span>
+                  <div class="input-group mb-3 inputM">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">所在城市</span>
+                      <select name="provice" id="" style="width: 100px;border: 1px solid #ccc;">
+                          <option value="">北京</option>
+                          <option value="">上海</option>
+                          <option value="">广州</option>
+                          <option value="">深圳</option>
+                      </select>
+                      <span class="input-group-text">省</span>
+                      <select name="city" id="" style="width: 100px;border: 1px solid #ccc;">
+                        <option value="">北京</option>
+                        <option value="">上海</option>
+                        <option value="">广州</option>
+                        <option value="">深圳</option>
+                    </select>
+                    <span class="input-group-text">市</span>
+                    <select name="city" id="" style="width: 100px;border: 1px solid #ccc;">
+                        <option value="">北京</option>
+                        <option value="">上海</option>
+                        <option value="">广州</option>
+                        <option value="">深圳</option>
+                    </select>
+                    <span class="input-group-text">区</span>
+                    </div>
+                  </div>
+                  <div class="input-group mb-3 inputM">
+                    <div class="input-group-prepend">
+                      <button class="btn btn-outline-secondary" type="button" id="button-addon">获取验证码</button>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                  </div>
+                  <span class="display-none"></span>
+                  <div class="notCode"><a href="#">收不到验证码</a></div>
+                  <div class="resigerto">立即注册</div>
+                  <div class="notCode">
+                      <p><a href="#">微博服务使用协议</a></p>
+                      <p><a href="#">微博个人信息保护政策</a></p>
+                      <p><a href="#">全国人大常委会关于加强网络信息保护的决定</a></p>
+                  </div>
+            </div>
+            <div class="m-c-sideBar">
+                <p class="line1">已有帐号，<a href="index.html">直接登录</a></p>
+                <p>微博注册帮助</p>
+                <div class="reg-help">
+                    <ul class="help-list">
+                        <li>
+                            <i>1</i>
+                            <a href="#">注册微博账号的常见问题</a>
+                        </li>
+                        <li>
+                            <i>2</i>
+                            <a href="#">手机号/邮箱在注册微博时提示已被注册</a>
+                        </li>
+                        <li>
+                            <i>3</i>
+                            <a href="#">进行短信验证时没有收到验证码，该怎么办？</a>
+                        </li>
+                        <li>
+                            <i>4</i>
+                            <a href="#">注册提示频繁怎么办？</a>
+                        </li>
+                    </ul>
+                    <a href="#">更多帮助</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="./js/cookie.js"></script>
+   <script src="./js/resiger.js"></script>
+</body>
+</html>

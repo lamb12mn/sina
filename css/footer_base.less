@@ -1,0 +1,91 @@
+.footer{
+    width: 100%;
+    height: 100%;
+    // height: 300px;
+    
+    .footer-top{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 10px;
+        background: #ccc;
+        div{
+           
+            .list {
+                // width: 24.5%;
+                // float: left;
+                display: block;
+                text-align: center;
+                
+                dt {
+                    // text-align: center;
+                    // float: right;
+                    // font-size: 16px;
+                    padding: 0 0 15px;
+                    white-space: nowrap;
+                    // width: 200px;
+                    // margin:0 auto;
+                    overflow: hidden;
+                }
+        
+                dd {
+                    // text-align: center;
+                   
+                    // float: left;
+                    white-space: nowrap;
+                    
+                    a {
+                        width: 48px;
+                        overflow: hidden;
+                        color: #222;
+                    }
+                    span:first-child{
+                        float: left;
+                        margin-right: 10px;
+                        img{
+                            width: 79px;
+                            height: 79px;
+                        }
+                    }
+                    span:nth-child(2){
+                        width: 100px;
+                        overflow: hidden;
+                        margin-right: 0px;
+                    }
+                   
+                }
+            }
+        }
+    }
+    .footer-bottom{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+        background: darkred;
+        .other-links{
+            width:100%;
+            background: #F0F0F0;
+            margin: 0 auto;
+            // padding: 20px 0 10px 80px;
+            text-align: center;
+            padding: 20px 0 45px;
+            p{
+                line-height: 1em;
+                margin-bottom: 10px;
+                a{
+                    margin-right: 15px;
+                    .weibo{
+                        background-position: -50px -300px;
+                        width: 20px;
+                        height: 20px;
+                        vertical-align: text-top;
+                        margin-right: 3px;
+                        background: url(../img/icon.png);
+                    }
+                }
+                span{
+                    margin-right: 15px;
+                }
+            }
+        }
+        }
+}

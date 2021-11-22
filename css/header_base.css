@@ -1,0 +1,111 @@
+.base {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  height: 46px;
+  border-top: 2px solid #fa7d3c;
+  box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.3), 0 0 6px 2px rgba(0, 0, 0, 0.15);
+  margin: 0;
+  padding: 0;
+}
+.header .span12 .logo {
+  float: left;
+  display: block;
+  margin-left: 50px;
+  height: 46px;
+  width: 80px;
+  background: url(../img/WB_logo.png) no-repeat 0 40%;
+}
+.header .span12 .span12-search {
+  width: 400px;
+  height: 28px;
+  margin: 9px 0 0 10px;
+}
+.header .span12 .span12-search input {
+  float: left;
+  width: 300px;
+  height: 100%;
+}
+.header .span12 .span12-search a {
+  float: left;
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  margin-top: 8px;
+  text-align: center;
+  text-decoration: none;
+}
+.header .span12 .span12-search .hideHostList {
+  width: 300px;
+  height: 300px;
+  margin-top: 32px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  display: none;
+}
+.header .span12 .span12-search .hideHostList p span {
+  display: inline-block;
+  height: 20px;
+  color: #fa7d3c;
+  margin-left: 10px;
+}
+.header .span12 .span12-search .hideHostList p i {
+  line-height: 20px;
+  height: 20px;
+  color: #fa7d3c;
+}
+.header .span12 .span12-search .hideHostList ul li i {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: -15px;
+  background: grey;
+  border-radius: 50%;
+  margin-bottom: 2px;
+  text-align: center;
+}
+.header .span12 .span12-search .hideHostList ul li span {
+  margin-left: 10px;
+}
+.header .span12 .span12-search .hideHostList ul li em {
+  display: inline-block;
+  float: right;
+  width: 20px;
+  height: 20px;
+  background: orange;
+  margin-right: 5px;
+}
+.header .span12 .navBar {
+  float: left;
+  width: 355px;
+  height: 48px -2px;
+}
+.header .span12 .navBar ul li {
+  float: left;
+  width: 56px;
+  height: 48px -2px;
+  text-align: center;
+  margin: 10px 0px 0 10px;
+}
+.header .span12 .navBar ul li a {
+  color: #222;
+}
+.header .span12 .navBar ul li a span {
+  margin-top: 5px;
+  margin-right: 10px;
+}
+.header .span12 .navBar ul li .change {
+  width: 56px;
+}
+.header .span12 .navBar ul li .dopDown {
+  width: 56px;
+  height: 130px;
+  background: #fff;
+  display: none;
+  border: 1px solid #ccc;
+}
+.header .span12 .navBar ul li .dopDown #clothes li {
+  margin-left: -24px;
+  width: 56px;
+}
